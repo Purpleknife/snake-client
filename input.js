@@ -28,6 +28,7 @@ const handleUserInput = function(input) { //To handle user input.
   if (input === 'd') {
     connection.write('Move: down');
   }
+  connection.write(`Say: This is Sparta!`)
 };
 
 
