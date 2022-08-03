@@ -11,6 +11,11 @@ const connect = function () {
   conn.on('data', (data) => { //Added this event handler to see a msg from the server. 
     console.log(data);
   });
+
+  conn.on('connect', () => {
+    console.log('Successfully connected to Game Server. Yahooo!');
+    conn.write(`Name: HN`); //Send msg to Server.
+  })
   
   return conn;
 };
