@@ -1,8 +1,8 @@
-const connect = require("./client");
+//const connect = require("./client");
 
 let connection;
 
-const setupInput = function (conn) {
+const setupInput = function(conn) {
   connection = conn;
   const stdin = process.stdin;
   stdin.setRawMode(true);
@@ -26,9 +26,9 @@ const handleUserInput = function(input) { //To handle user input.
     connection.write('Move: down');
   }
   if (input === 'd') {
-    connection.write('Move: down');
+    connection.write('Move: right');
   }
-  connection.write(`Say: This is Sparta!`)
+  connection.write(`Say: This is Sparta!`);
 };
 
 
